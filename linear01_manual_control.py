@@ -2,7 +2,7 @@
 # controlled lienar actuator has stroke length of 100mm (3.93 inches)
 
 import argparse
-from time import sleep
+from linear_act_utils import linear_motion_maxspeed, linear_motion_pwm
 
 # ------- Get and Validate User Input -------- #
 parser = argparse.ArgumentParser()
@@ -33,3 +33,5 @@ print(f"value for direction is {direction}")
 print(f"value for distance is {float(distance)}")
 print(f"value for speed is {float(speed)}")
 
+# case 1: full speed, no PWM required
+linear_motion_maxspeed(direction, distance)
