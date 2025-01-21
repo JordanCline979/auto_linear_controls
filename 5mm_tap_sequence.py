@@ -3,6 +3,7 @@
 from linear_act_utils import linear_motion_maxspeed
 import time
 
-linear_motion_maxspeed("forward", 5)
-time.sleep(0.01)
-linear_motion_maxspeed("backward", 5)
+for i in range(10):
+    linear_motion_maxspeed("forward", 5)
+    time.sleep(0.01)
+    linear_motion_maxspeed("backward", 5)
